@@ -14,6 +14,12 @@ const selecedSong = (state = {songIndex:0, playlistName:''}, action) => {
         src:action.src, 
         title:action.title
     }
+    case SELECT_PLAYLIST:
+      return{
+        ...state,
+        songIndex:-1
+      }
+ 
     default:
       return state
   }

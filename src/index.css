@@ -133,7 +133,7 @@ menu, ol, ul {
   width: 10%;
 }
 .songs-column-year{
-  width:15%;
+  width: 10%;
   font-size: 2rem;
 }
 .songs-column-playlist{
@@ -163,7 +163,7 @@ menu, ol, ul {
 .listen{
   color: #8a6d3b;
   margin: 0;
-  padding: 5px 20px;
+  padding: 5px 15px;
   border: 0;
   background: #8a6d3b36;
 }

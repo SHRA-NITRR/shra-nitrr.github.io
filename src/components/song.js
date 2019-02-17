@@ -34,10 +34,11 @@ const Song=(props)=>{
 
 }
 const mapStateToProps = state => {
-    const { selecedSong } = state;
+    const { selecedSong, selectedPlayList} = state;
   
     return {
-      playingSongIndex:selecedSong.songIndex
+      playingSongIndex:selecedSong.songIndex,
+      selectedPlayListIndex:selectedPlayList.selectedPlayListIndex
     }
   }
   const mapDispatchToProps = dispatch => {

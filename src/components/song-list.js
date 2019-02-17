@@ -20,6 +20,7 @@ const SongList=(props)=>{
                             duration={song.duration}
                             playlistName={playlistName}
                             songIndex={index}
+                            playlistIndex={selectedPlaylistIndex}
                             key={index}
                         />
                       )
