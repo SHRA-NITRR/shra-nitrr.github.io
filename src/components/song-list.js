@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Song from './song';
 import {songsList} from '../data';
 
 const SongList=(props)=>{
-    const {playlistName, songs}=songsList;
+    const {selectedPlaylistIndex}=props;
+    const {songs, playlistName}=songsList[selectedPlaylistIndex];
     return(
         <div className='track-container'>
           <h2 className='playlist-header'>{playlistName}</h2>
@@ -28,5 +30,12 @@ const SongList=(props)=>{
       )
 
 }
+const mapStateToProps = state => {
+  const { selectedPlayList } = state;
 
-export default SongList;
+  return {
+    selectedPlayList:selectedPlayList.selectedPlayList,
+    selectedPlaylistIndex: selectedPlayList.selectedPlaylistIndex
+  }
+}
+export default connect(mapStateToProps) (SongList);

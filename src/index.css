@@ -29,7 +29,9 @@ code {
     background-size: 260px;
     background-color: #e0dac35c;
 }
-
+.description>p{
+  font-size: 15px;
+}
 .band-name{
   width: 200px;
   margin: auto;
@@ -74,9 +76,7 @@ code {
 .song-name{
   color: #754c05bf;
 }
-.playlist-name{
 
-}
 .track {
   cursor: pointer;
 }
@@ -177,7 +177,10 @@ menu, ol, ul {
 .dot {
   height: 15px;
   width: 15px;
-  background-color: #8a6d3b4a;
+  background-color: #8a6d3b36;
   border-radius: 50%;
   display: block;
+}
+.active{
+  background-color: #8a6d3b;
 }

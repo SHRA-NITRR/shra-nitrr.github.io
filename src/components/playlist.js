@@ -1,31 +1,31 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {selectSong } from '../actions';
+import { selectPlayList} from '../actions';
 
 const PlayList=(props)=>{
-    const isPlayIng=props.songIndex==props.playingSongIndex;
+    const isPlayIng=props.playlistId==props.selectedPlaylistIndex;
     return(
         <li>
             <div className="audiolibrary-track-head">
                 <div className="playlist-column audiolibrary-column-playlist">
-                    {props.title}
+                    {props.playlistName}
                 </div>
                 <div className="playlist-column audiolibrary-column-dot" >
-                <span className="dot"/>
+                <span className={isPlayIng?"dot active":"dot"}/>
                 </div>
                 <div className="playlist-column audiolibrary-column-year">  
-                {7875}
+                {props.duration}
                 </div>
                 <div className="playlist-column audiolibrary-column-play-control" >  
                     <button  
                     className='listen'
-                        onClick={()=>props.playSong(props.songIndex, props.playlistName, props.src, props.title)}
+                        onClick={()=>props.selectPlaylist(props.playlistName, props.playlistId)}
                     >LISTEN</button>
                 </div>
                 <div className="playlist-column audiolibrary-column-play-control" >  
                     <button  
                     className='buy'
-                        onClick={()=>props.playSong(props.songIndex, props.playlistName, props.src, props.title)}
+                        onClick={()=>props.selectPlaylist(props.playlistName, props.playlistId)}
                     >BUY</button>
                 </div>
             </div>
@@ -35,15 +35,16 @@ const PlayList=(props)=>{
 
 }
 const mapStateToProps = state => {
-    const { selecedSong } = state;
+    const { selectedPlayList } = state;
   
     return {
-      playingSongIndex:selecedSong.songIndex
+      selectedPlayList:selectedPlayList.selectedPlayList,
+      selectedPlaylistIndex: selectedPlayList.selectedPlaylistIndex
     }
   }
   const mapDispatchToProps = dispatch => {
     return {
-      playSong:(songIndex, playlistName, src, title)=>dispatch(selectSong(songIndex, playlistName, src, title))
+      selectPlaylist:(playlistName, playlistIndex)=>dispatch(selectPlayList(playlistName, playlistIndex))
     }
   }
 export default connect(mapStateToProps, mapDispatchToProps)(PlayList);

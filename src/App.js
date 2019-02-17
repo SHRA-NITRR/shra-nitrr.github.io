@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import LearnRedux from './components/learn-redux';
 import CurrentSong from './components/current-song-container';
 import PlaylistContainer from './components/playlist-container';
 
@@ -39,9 +38,6 @@ const App = ()=> {
     </div>
     <div className='col-lg-12'>
       <PlaylistContainer/>
-    </div>
-    <div className='col-lg-12'>
-      <LearnRedux/>
     </div>
   </div>);
 }

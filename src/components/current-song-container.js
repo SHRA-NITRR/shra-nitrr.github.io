@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import MusicPlayer from './music-player';
 import { connect } from 'react-redux'
-import {songsList} from '../data';
 
 const CurrentSong=(props)=>{
     const {songIndex, title, playlistName, src}=props.selecedSong;
@@ -11,7 +10,7 @@ const CurrentSong=(props)=>{
           
             <div className='row'>
               <div className='song-details'>
-                  <h1 className='now-playing'>{songIndex!==-1?"Now Playing": 'Please select a song to Play'}</h1>
+                  <h1 className='now-playing'>{songIndex!==-1?"Now Playing": 'Please Click Play button on the song!'}</h1>
                   <h3 className='playlist-name'>{playlistName}</h3>
                   <h5 className='song-name'>{title}</h5>
 

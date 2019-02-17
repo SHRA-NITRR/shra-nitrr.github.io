@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import SongList from './song-list';
 import Discography from './discography';
