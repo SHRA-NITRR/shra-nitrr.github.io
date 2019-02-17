@@ -6,23 +6,23 @@ const PlayList=(props)=>{
     const isPlayIng=props.playlistId==props.selectedPlaylistIndex;
     return(
         <li>
-            <div className="audiolibrary-track-head">
-                <div className="playlist-column audiolibrary-column-playlist">
+            <div className="songs-track-head">
+                <div className="playlist-column songs-column-playlist">
                     {props.playlistName}
                 </div>
-                <div className="playlist-column audiolibrary-column-dot" >
+                <div className="playlist-column songs-column-dot" >
                 <span className={isPlayIng?"dot active":"dot"}/>
                 </div>
-                <div className="playlist-column audiolibrary-column-year">  
+                <div className="playlist-column songs-column-year">  
                 {props.duration}
                 </div>
-                <div className="playlist-column audiolibrary-column-play-control" >  
+                <div className="playlist-column songs-column-play-control" >  
                     <button  
                     className='listen'
                         onClick={()=>props.selectPlaylist(props.playlistName, props.playlistId)}
                     >LISTEN</button>
                 </div>
-                <div className="playlist-column audiolibrary-column-play-control" >  
+                <div className="playlist-column songs-column-play-control" >  
                     <button  
                     className='buy'
                         onClick={()=>props.selectPlaylist(props.playlistName, props.playlistId)}

@@ -10,7 +10,7 @@ const CurrentSong=(props)=>{
           
             <div className='row'>
               <div className='song-details'>
-                  <h1 className='now-playing'>{songIndex!==-1?"Now Playing": 'Please Click Play button on the song!'}</h1>
+                  <h1 className='now-playing'>{songIndex!==-1?"Now Playing": 'Click on Play Button next to Songs below!'}</h1>
                   <h3 className='playlist-name'>{playlistName}</h3>
                   <h5 className='song-name'>{title}</h5>
 

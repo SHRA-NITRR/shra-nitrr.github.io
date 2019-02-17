@@ -87,14 +87,14 @@ menu, ol, ul {
   list-style: none;
 }
 
-.track-list li.track .audiolibrary-track-head {
+.track-list li.track .songs-track-head {
   display: table;
   table-layout: fixed;
   width: 100%;
   height: 30px;
 }
 
-.audiolibrary-column {
+.songs-column {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
@@ -105,14 +105,14 @@ menu, ol, ul {
 .glyphicon{
   opacity: 1
 }
-.audiolibrary-column-title{
+.songs-column-title{
   width: 50%;
 }
 
-.audiolibrary-column-tag{
+.songs-column-tag{
   width: 30%;
 }
-.audiolibrary-column-duration{
+.songs-column-duration{
   width: 20%;
 }
 
@@ -129,14 +129,14 @@ menu, ol, ul {
 .playing{
   opacity: 1 ;
 }
-.audiolibrary-column-dot{
+.songs-column-dot{
   width: 10%;
 }
-.audiolibrary-column-year{
+.songs-column-year{
   width:15%;
   font-size: 2rem;
 }
-.audiolibrary-column-playlist{
+.songs-column-playlist{
   width: 45%;
   font-size: 2rem;
 }

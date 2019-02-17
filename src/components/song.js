@@ -6,8 +6,8 @@ const Song=(props)=>{
     const isPlayIng=props.songIndex==props.playingSongIndex;
     return(
         <li>
-            <div className="audiolibrary-track-head">
-                <div className="audiolibrary-column audiolibrary-column-play-control" >  
+            <div className="songs-track-head">
+                <div className="songs-column songs-column-play-control" >  
                     <div className={isPlayIng?"playing":"album-art" }>
                         <div className="album-art-background hid">
                         </div>
@@ -17,13 +17,13 @@ const Song=(props)=>{
 
                     </div>
                 </div>
-                <div className="audiolibrary-column audiolibrary-column-title">
+                <div className="songs-column songs-column-title">
                     {props.title}
                 </div>
-                <div className="audiolibrary-column audiolibrary-column-tag" >
+                <div className="songs-column songs-column-tag" >
                 ......................
                 </div>
-                <div className="audiolibrary-column audiolibrary-column-duration">  
+                <div className="songs-column songs-column-duration">  
 
                 {props.duration}
                 </div>
